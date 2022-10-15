@@ -1,5 +1,7 @@
 from typing import Iterator
+
 from excelsigncheck.signature import ExcelSignature
+
 
 class ExcelSignCheck:
     import win32com.client
