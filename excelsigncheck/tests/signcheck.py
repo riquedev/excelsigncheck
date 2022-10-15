@@ -7,8 +7,9 @@ from excelsigncheck.types import CertificateDetail, SignatureDetail
 class ExcelSignCheckTestCase(unittest.TestCase):
 
     def setUp(self) -> None:
-        self.file_with_signature = str(pathlib.Path('file-with-signature.xlsx').absolute())
-        self.file_without_signature = str(pathlib.Path('file-without-signature.xlsx').absolute())
+        ROOT = pathlib.Path(__file__).parent.absolute()
+        self.file_with_signature = str(ROOT.joinpath('file-with-signature.xlsx'))
+        self.file_without_signature = str(ROOT.joinpath('file-without-signature.xlsx'))
 
     def test_signatures_iter(self):
         sign_check = ExcelSignCheck(self.file_with_signature)
