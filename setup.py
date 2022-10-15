@@ -12,6 +12,7 @@ setup(
     install_requires=[
         "pywin32 == 304"
     ],
-    test_suite="excelsigncheck.tests"
+    test_suite="excelsigncheck.tests",
+    platforms=["nt"]
 
 )
